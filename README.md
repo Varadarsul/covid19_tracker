@@ -73,7 +73,7 @@ This script fetches recent historical data for a selected country (default: Indi
 
 ## 📸 Screenshots
 ### 🏠 Homepage
-![Homepage](assets/homepage.png)
+![Homepage](https://github.com/Varadarsul/covid19_tracker/blob/main/screenshots/Screenshot%202025-05-04%20175426.png?raw=true)
 
 ### 🌍 Country Page
 ![Country Page](assets/country_page.png)
