@@ -72,8 +72,11 @@ python data_analysis/forecast.py
 This script fetches recent historical data for a selected country (default: India), applies linear regression, and plots future trends.
 
 ## 📸 Screenshots
+### 🏠 Homepage
+![Homepage](assets/homepage.png)
 
-> *Add your screenshots here to showcase homepage and country-specific pages with map and charts.*
+### 🌍 Country Page
+![Country Page](assets/country_page.png)
 
 ## 📡 Data Source
 
