@@ -35,8 +35,8 @@ covid\_dashboard/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/covid-dashboard.git
-cd covid-dashboard
+git clone https://github.com/Varadarsul/covid19_tracker.git
+cd covid19_tracker
 ````
 
 ### 2. Create a virtual environment (optional but recommended)
