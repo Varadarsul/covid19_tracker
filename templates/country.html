@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ data["country"] }} - COVID Data</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 20px;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h2>{{ data["country"] }} COVID-19 Stats</h2>
+    <ul>
+        <li><strong>Cases:</strong> {{ data["cases"] }}</li>
+        <li><strong>Deaths:</strong> {{ data["deaths"] }}</li>
+        <li><strong>Recovered:</strong> {{ data["recovered"] }}</li>
+        <li><strong>Active:</strong> {{ data["active"] }}</li>
+        <li><strong>Critical:</strong> {{ data["critical"] }}</li>
+        <li><strong>Tests Conducted:</strong> {{ data["tests"] }}</li>
+    </ul>
+
+    <div id="map"></div>
+
+    <script>
+        // Jinja2 passes these values from backend
+        const lat = {{ data["countryInfo"]["lat"] | safe }};
+        const long = {{ data["countryInfo"]["long"] | safe }};
+        const country = "{{ data['country'] }}";
+        const totalCases = {{ data["cases"] }};
+
+        // Initialize Leaflet map
+        const map = L.map('map').setView([lat, long], 4);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 10,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add marker with popup
+        const marker = L.marker([lat, long]).addTo(map);
+        marker.bindPopup(`<strong>${country}</strong><br>Total Cases: ${totalCases}`).openPopup();
+    </script>
+</body>
+</html>

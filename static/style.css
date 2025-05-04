@@ -1,0 +1,119 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #3498db, #2c3e50); /* Blue gradient background */
+    color: #ecf0f1; /* Light text color */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+}
+
+/* Country Details Styling */
+ul {
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 20px;
+    color: #fff; /* Text color */
+}
+
+li {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Map Styling */
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 30px;
+    border: 2px solid #fff; /* White border */
+}
+
+/* Button Styling */
+button {
+    background-color: #2980b9; /* Blue button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 30px auto;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #3498db; /* Lighter blue on hover */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+th, td {
+    border: 2px solid #fff; /* White border */
+    padding: 12px 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #2980b9; /* Blue header background */
+    color: #fff;
+}
+
+td {
+    background-color: #ecf0f1; /* Light background for data */
+    color: #000; /* Black text for numbers */
+}
+
+td a {
+    color: #2980b9; /* Link color (same as header background) */
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    ul {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}

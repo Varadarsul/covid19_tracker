@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COVID-19 Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>COVID-19 Global Tracker</h1>
+    <table>
+        <tr><th>Country</th><th>Cases</th><th>Deaths</th><th>Recovered</th></tr>
+        {% for country in countries %}
+        <tr>
+            <td><a href="/country/{{ country['country'] }}">{{ country['country'] }}</a></td>
+            <td>{{ country['cases'] }}</td>
+            <td>{{ country['deaths'] }}</td>
+            <td>{{ country['recovered'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
